@@ -57,6 +57,9 @@ public class AuthzAnnotationAspect extends AbstractProxy {
             throw new AuthzException("用户尚未登录");
         }
 
-        PrincipalCollection principalCollection = currentUser.getPreviousPrincipals();
+        PrincipalCollection principals = currentUser.getPreviousPrincipals();
+        if(principals == null || principals.isEmpty()){
+            throw new AuthzException("用户尚未登录");
+        }
     }
 }
