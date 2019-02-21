@@ -6,6 +6,7 @@ import org.apache.shiro.mgt.RealmSecurityManager;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.web.mgt.WebSecurityManager;
 import org.apache.shiro.web.servlet.ShiroFilter;
+import org.easy4j.plugin.security.realm.Easy4jCustomRealm;
 import org.easy4j.plugin.security.realm.Easy4jJdbcRealm;
 
 import java.util.LinkedHashSet;
@@ -48,7 +49,9 @@ public class Easy4jSecurityFilter extends ShiroFilter {
     }
 
     private void addCustomRealm(Set<Realm> realms){
-
+        Easy4jSecurity easy4jSecurity = SecurityConfig.getEasy4jSecurity();
+        Easy4jCustomRealm easy4jCustomRealm = new Easy4jCustomRealm(easy4jSecurity);
+        realms.add(easy4jCustomRealm);
     }
 
     private void setCache(WebSecurityManager webSecurityManager){

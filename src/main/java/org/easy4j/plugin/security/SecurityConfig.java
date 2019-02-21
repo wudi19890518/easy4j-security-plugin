@@ -16,8 +16,8 @@ public final class SecurityConfig {
         return ConfigHelper.getString(SecurityConstant.REALMS);
     }
 
-    public static Easy4jSecurity getSmartSecurity() {
-        String className = ConfigHelper.getString(SecurityConstant.SMART_SECURITY);
+    public static Easy4jSecurity getEasy4jSecurity() {
+        String className = ConfigHelper.getString(SecurityConstant.EASY4J_SECURITY);
         return (Easy4jSecurity) ReflectionUtil.newInstance(className);
     }
 

@@ -9,10 +9,10 @@ public interface Easy4jSecurity {
 
     /**
      * 根据用户名获取密码
-     * @param password
+     * @param username
      * @return
      */
-    String getPassword(String password);
+    String getPassword(String username);
 
     /**
      * 获取角色集合

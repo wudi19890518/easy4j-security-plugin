@@ -6,7 +6,7 @@ public interface SecurityConstant {
     String REALMS_JDBC = "jdbc";
     String REALMS_CUSTOM = "custom";
 
-    String SMART_SECURITY = "app.plugin.security.custom.class";
+    String EASY4J_SECURITY = "app.plugin.security.custom.class";
 
     String JDBC_AUTHC_QUERY = "app.plugin.security.jdbc.authc_query";
     String JDBC_ROLES_QUERY = "app.plugin.security.jdbc.roles_query";
