@@ -6,9 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 判断当前用户是否已登录（包括：已认证 与 已记住）
+ * 判断当前用户是否拥有某种权限
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface User {
+public @interface HasPermissions {
+
+    String value();
 }
